@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Tandelon logo">
+  <defs>
+    <linearGradient id="glow" x1="0" x2="1">
+      <stop offset="0%" stop-color="#7ee7ff"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="none" stroke="url(#glow)" stroke-width="2" opacity="0.6"/>
+  <path d="M20 20h24M20 32h24M32 20v24" stroke="url(#glow)" stroke-width="4" stroke-linecap="round"/>
+</svg>
+
