@@ -1,177 +1,230 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tandelon — Open‑source tools for repetitive work</title>
-    <meta name="description" content="Tandelon builds open‑source tools that reduce repetitive work so people can focus on what matters. Simple, reliable, and thoughtfully designed." />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tandelon — Open-source tools for productivity</title>
+  <meta name="description" content="Tandelon builds lean, open-source tools that reduce repetitive work so people can focus on what matters." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <defs>
+      <symbol id="i-github" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 .5A12 12 0 0 0 8.21 23.9c.6.11.82-.26.82-.57v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.35-1.76-1.35-1.76-1.11-.76.08-.75.08-.75 1.23.09 1.88 1.26 1.88 1.26 1.09 1.86 2.86 1.32 3.56 1.01.11-.8.43-1.32.78-1.62-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.62-5.47 5.92.44.38.83 1.12.83 2.26v3.35c0 .31.21.68.83.56A12 12 0 0 0 12 .5z"/>
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/>
+      </symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.38 4.98 3.5ZM.47 8.19h4.06V21H.47ZM8.12 8.19h3.89v1.75h.06c.54-1.03 1.86-2.12 3.83-2.12 4.09 0 4.84 2.69 4.84 6.19V21h-4.06v-6.2c0-1.48-.03-3.38-2.06-3.38-2.06 0-2.38 1.6-2.38 3.27V21H8.12Z"/>
+      </symbol>
+      <symbol id="i-external" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path fill="currentColor" d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/>
+      </symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M9 6l6 6-6 6"/>
+      </symbol>
+      <symbol id="i-star" viewBox="0 0 24 24">
+        <path fill="currentColor" d="m12 2 3.09 6.26L22 9.27l-5 4.88L18.18 22 12 18.9 5.82 22 7 14.15l-5-4.88 6.91-1.01L12 2z"/>
+      </symbol>
+      <symbol id="i-quote" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M7 6h5v5H9v3H7V6zm9 0h5v5h-3v3h-2V6z"/>
+      </symbol>
+    </defs>
+  </svg>
 
-    <header class="site-header" role="banner">
-      <div class="container header-inner">
-        <a href="#top" class="brand" aria-label="Tandelon home">
-          <img src="assets/logo.svg" alt="Tandelon logo" class="logo" />
-          <span class="brand-text">Tandelon</span>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Tandelon home">
+        <img src="assets/logo.png" alt="Tandelon logo" class="logo" />
+        <span class="brand-text">Tandelon</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="nav" aria-expanded="false">
+        <span class="nav-bars"></span>
+      </button>
+
+      <nav id="nav" class="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#founder">Founder</a>
+        <a href="#support">Support</a>
+        <a class="chip" href="https://github.com/tandelon" target="_blank" rel="noopener">
+          <svg width="16" height="16" role="img" aria-hidden="true"><use href="#i-github"/></svg>
+          <span>GitHub</span>
+          <svg width="14" height="14" aria-hidden="true"><use href="#i-external"/></svg>
         </a>
-        <nav class="site-nav" aria-label="Primary">
-          <a href="#about">About</a>
-          <a href="#founder">Founder</a>
-          <a href="#support">Support</a>
-          <a class="button ghost" href="mailto:hello@tandelon.org?subject=Keep%20me%20posted%20on%20Tandelon">Get updates</a>
-        </nav>
+      </nav>
+    </div>
+  </header>
+  <div class="nav-scrim" hidden></div>
+
+  <main id="main" tabindex="-1">
+    <section id="top" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <h1>Open-source tools that tame repetitive work</h1>
+          <p class="lede">Lean utilities that respect your time. Build momentum, not maintenance.</p>
+          <div class="actions">
+            <a class="button filled" href="#projects">
+              Explore tools
+              <svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M9 6l6 6-6 6"/></svg>
+            </a>
+            <a class="button outlined" href="https://github.com/tandelon" target="_blank" rel="noopener">
+              GitHub
+              <svg width="16" height="16" aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14zM19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="gridfield"></div>
+          <div class="orb orb-a"></div>
+          <div class="orb orb-b"></div>
+        </div>
       </div>
-    </header>
 
-    <main id="main" tabindex="-1">
-      <section id="top" class="section hero">
-        <div class="container grid-2">
-          <div class="stack gap-l reveal">
-            <h1 class="title">Open‑source tools that tame repetitive work</h1>
-            <p class="lede">Tandelon builds lean, reliable utilities so you can focus on the work that matters. Our first app is actively in development.</p>
-            <div class="actions">
-              <a class="button primary" href="#about">About the organization</a>
-              <a class="button" href="https://github.com/tandelon" target="_blank" rel="noopener">Follow progress</a>
+      <svg class="divider" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,0 V60 Q300,120 600,60 T1200,60 V0z"/>
+      </svg>
+    </section>
+
+
+    <section id="about" class="section reveal">
+      <div class="container">
+        <header class="section-head">
+          <h2>About</h2>
+          <p>We craft small, focused tools that remove friction from everyday workflows. Clarity over clutter. Reliability over hype.</p>
+        </header>
+        <div class="pillars">
+          <article class="card">
+            <div class="card-head">
+              <svg width="20" height="20" aria-hidden="true"><use href="#i-star"/></svg>
+              <h3>Open</h3>
             </div>
-          </div>
-          <div class="hero-art reveal" aria-hidden="true">
-            <div class="orb orb-a"></div>
-            <div class="orb orb-b"></div>
-            <div class="gridfield"></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="section">
-        <div class="container">
-          <header class="section-head reveal">
-            <h2>About This Organization</h2>
-            <p>We craft small, focused tools that remove friction from everyday workflows. We value clarity, reliability, and momentum over bloat.</p>
-          </header>
-
-          <div class="pillars">
-            <article class="card glass reveal">
-              <div class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2l4 8h6l-5 4 2 8-7-5-7 5 2-8-5-4h6z"/></svg>
-              </div>
-              <h3>Open by default</h3>
-              <p>We publish code, roadmaps, and docs openly so anyone can learn, improve, and build on the work.</p>
-            </article>
-            <article class="card glass reveal">
-              <div class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 3a9 9 0 100 18 9 9 0 000-18zm1 9h4a7 7 0 11-7-7v4a3 3 0 103 3z"/></svg>
-              </div>
-              <h3>Practical first</h3>
-              <p>We ship useful, minimal features that solve real problems and get out of your way.</p>
-            </article>
-            <article class="card glass reveal">
-              <div class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M19 3H5a2 2 0 00-2 2v12a4 4 0 004 4h10a4 4 0 004-4V5a2 2 0 00-2-2zm-7 14H8v-2h4v2zm4-4H8v-2h8v2zm0-4H8V7h8v2z"/></svg>
-              </div>
-              <h3>Reliable by design</h3>
-              <p>Simple architectures and strong defaults reduce edge cases and ensure tools you can trust daily.</p>
-            </article>
-            <article class="card glass reveal">
-              <div class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 6h6v2h-4a3 3 0 00-3 3v4h-2v-4a5 5 0 015-5z"/></svg>
-              </div>
-              <h3>Sustainably paced</h3>
-              <p>We prefer steady, compounding progress over hype cycles so tools remain healthy long-term.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="founder" class="section alt">
-        <div class="container grid-2 founder">
-          <div class="reveal">
-            <h2>Founder</h2>
-            <p class="muted">Independent, curious, and hands‑on.</p>
-            <div class="card glass founder-card">
-              <div class="avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" width="80" height="80">
-                  <defs>
-                    <linearGradient id="g" x1="0" x2="1">
-                      <stop offset="0%" stop-color="#7ee7ff"/>
-                      <stop offset="100%" stop-color="#c084fc"/>
-                    </linearGradient>
-                  </defs>
-                  <circle cx="32" cy="32" r="30" fill="url(#g)" opacity="0.2" />
-                  <circle cx="32" cy="26" r="10" fill="url(#g)"/>
-                  <rect x="16" y="40" width="32" height="14" rx="7" fill="url(#g)"/>
-                </svg>
-              </div>
-              <div class="founder-text">
-                <h3 class="founder-name">Dennis Tandelon</h3>
-                <p class="founder-role">Founder & Builder</p>
-                <p>Focused on developer experience and humane tooling. Believes small, sharp tools amplify people more than feature‑heavy suites.</p>
-                <div class="links">
-                  <a href="https://github.com/tandelon" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5a12 12 0 00-3.79 23.4c.6.11.82-.26.82-.57v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.35-1.76-1.35-1.76-1.11-.76.08-.75.08-.75 1.23.09 1.88 1.26 1.88 1.26 1.09 1.86 2.86 1.32 3.56 1.01.11-.8.43-1.32.78-1.62-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.62-5.47 5.92.44.38.83 1.12.83 2.26v3.35c0 .31.21.68.83.56A12 12 0 0012 .5z"/></svg>
-                    <span>GitHub</span>
-                  </a>
-                  <a href="mailto:hello@tandelon.org" class="icon-link" aria-label="Email">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                    <span>Email</span>
-                  </a>
-                  <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="icon-link" aria-label="LinkedIn">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6.94 6.5A2.44 2.44 0 114.5 4.06 2.44 2.44 0 016.94 6.5zM4.75 8.5h4.37v10.94H4.75zM13 8.5h4.19v1.5h.06a4.59 4.59 0 014.13-2.27c4.42 0 5.24 2.91 5.24 6.69v5.52h-4.56v-4.9c0-1.17 0-2.67-1.63-2.67s-1.88 1.27-1.88 2.59v5h-4.56z" transform="scale(.8) translate(-3,-2)"/></svg>
-                    <span>LinkedIn</span>
-                  </a>
-                </div>
-              </div>
+            <p>Transparent code, roadmaps, and docs so anyone can learn and contribute.</p>
+          </article>
+          <article class="card">
+            <div class="card-head">
+              <svg width="20" height="20" aria-hidden="true"><use href="#i-chevron"/></svg>
+              <h3>Practical</h3>
             </div>
-          </div>
-          <div class="founder-aside reveal">
-            <div class="quote card glass">
-              <svg viewBox="0 0 24 24" width="24" height="24" class="quote-icon" aria-hidden="true"><path fill="currentColor" d="M7 6h5v5H9v3H7V6zm9 0h5v5h-3v3h-2V6z"/></svg>
-              <p>“Great tools disappear into your flow. They feel simple because they respect your time.”</p>
+            <p>Essential features that solve real problems without getting in your way.</p>
+          </article>
+          <article class="card">
+            <div class="card-head">
+              <svg width="20" height="20" aria-hidden="true"><use href="#i-quote"/></svg>
+              <h3>Reliable</h3>
             </div>
-          </div>
+            <p>Simple architectures, strong defaults, predictable behavior.</p>
+          </article>
+          <article class="card">
+            <div class="card-head">
+              <svg width="20" height="20" aria-hidden="true"><use href="#i-external"/></svg>
+              <h3>Sustainable</h3>
+            </div>
+            <p>Steady progress, long-term health, no feature bloat.</p>
+          </article>
         </div>
-      </section>
-
-      <section id="support" class="section">
-        <div class="container">
-          <header class="section-head reveal">
-            <h2>Support</h2>
-            <p>There are simple ways to help while we build the first release.</p>
-          </header>
-          <div class="support grid-3">
-            <article class="card glass reveal">
-              <h3>Star and follow</h3>
-              <p>Star our repositories and follow along on GitHub to signal interest and get updates.</p>
-              <a class="button" href="https://github.com/tandelon" target="_blank" rel="noopener">Visit GitHub</a>
-            </article>
-            <article class="card glass reveal">
-              <h3>Contribute</h3>
-              <p>Open issues, propose ideas, or send pull requests when the repos open up. Community input shapes the roadmap.</p>
-              <a class="button ghost" href="mailto:hello@tandelon.org?subject=I%20want%20to%20contribute">Say hello</a>
-            </article>
-            <article class="card glass reveal">
-              <h3>Share</h3>
-              <p>Tell a friend or team about Tandelon if our mission resonates. It helps us reach the right people.</p>
-              <a class="button ghost" href="#top">Spread the word</a>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="year"></span> Tandelon. All rights reserved.</p>
-        <nav class="footer-nav" aria-label="Footer">
-          <a href="#about">About</a>
-          <a href="#founder">Founder</a>
-          <a href="#support">Support</a>
-        </nav>
       </div>
-    </footer>
+    </section>
 
-    <script src="script.js"></script>
-  </body>
-  </html>
+    <section id="projects" class="section alt reveal">
+      <div class="container">
+        <header class="section-head">
+          <h2>Projects</h2>
+          <p>Open-source utilities designed to simplify repetitive workflows.</p>
+        </header>
 
+        <div class="grid-3 projects">
+          <article class="card project">
+            <h3>Tabelin</h3>
+            <p>Combine Excel sheets, map columns, and automate merging with a clean desktop UI.</p>
+            <a href="https://github.com/tandelon/tabelin" target="_blank" rel="noopener" class="button text">
+              View on GitHub <svg width="16" height="16" aria-hidden="true"><use href="#i-external"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="founder" class="section reveal">
+      <div class="container grid-2 founder">
+        <div class="founder-card card">
+          <div class="avatar"><img src="assets/dennis.jpg" alt="Dennis Tandelon" /></div>
+          <div class="founder-text">
+            <h3>Dennis Tandelon</h3>
+            <p class="muted">Founder & Builder</p>
+            <p>Focused on developer experience and humane tooling. Small, sharp tools > heavy suites.</p>
+            <div class="links">
+              <a href="https://github.com/dennistandelon" target="_blank" class="icon-link">
+                <svg width="18" height="18" aria-hidden="true"><use href="#i-github"/></svg> GitHub
+              </a>
+              <a href="mailto:dennis.tandelon29@gmail.com" class="icon-link">
+                <svg width="18" height="18" aria-hidden="true"><use href="#i-mail"/></svg> Email
+              </a>
+              <a href="https://linkedin.com/in/dennistandelon" target="_blank" class="icon-link">
+                <svg width="18" height="18" aria-hidden="true"><use href="#i-linkedin"/></svg> LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="quote card">
+          <svg width="24" height="24" class="quote-icon" aria-hidden="true"><use href="#i-quote"/></svg>
+          <p>“Great tools disappear into your flow. They feel simple because they respect your time.”</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="support" class="section alt reveal">
+      <div class="container">
+        <header class="section-head">
+          <h2>Support</h2>
+          <p>Simple ways to help while we build the first releases.</p>
+        </header>
+        <div class="grid-3 support">
+          <article class="card">
+            <h3>Star & follow</h3>
+            <p>Star repositories and follow progress on GitHub.</p>
+            <a class="button text" href="https://github.com/tandelon" target="_blank" rel="noopener">
+              Visit GitHub <svg width="16" height="16"><use href="#i-external"/></svg>
+            </a>
+          </article>
+          <article class="card">
+            <h3>Contribute</h3>
+            <p>Open issues, propose ideas, or send pull requests.</p>
+            <a class="button text" href="mailto:hello@tandelon.org">Say hello</a>
+          </article>
+          <article class="card">
+            <h3>Share</h3>
+            <p>Tell a friend or a team about Tandelon if our mission resonates.</p>
+            <a class="button text" href="#top">Back to top</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Tandelon</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#founder">Founder</a>
+      </nav>
+      <div class="footer-icons">
+        <a href="https://github.com/tandelon" target="_blank" aria-label="GitHub">
+          <svg width="18" height="18"><use href="#i-github"/></svg>
+        </a>
+        <a href="mailto:hello@tandelon.org" aria-label="Email">
+          <svg width="18" height="18"><use href="#i-mail"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

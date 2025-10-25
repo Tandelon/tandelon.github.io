@@ -1,59 +1,33 @@
-// Small progressive-enhancement JS: year, scroll reveal, active nav highlighting
+const NAV_BREAK = 760;
+const body = document.body;
+const nav = document.getElementById('nav');
+const navToggle = document.querySelector('.nav-toggle');
+let scrim = document.querySelector('.nav-scrim');
+if (!scrim) { scrim = document.createElement('div'); scrim.className = 'nav-scrim'; scrim.hidden = true; body.appendChild(scrim); }
 
-// Copyright year
-document.getElementById('year').textContent = new Date().getFullYear();
-
-// IntersectionObserver reveal
-const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-if (!prefersReduced && 'IntersectionObserver' in window) {
-  const io = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        io.unobserve(entry.target);
-      }
-    }
-  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
-
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-} else {
-  // Fallback: show immediately
-  document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+function openNav(){
+  if (!nav) return;
+  nav.classList.remove('closed');
+  nav.classList.add('open');
+  navToggle?.setAttribute('aria-expanded','true');
+  scrim.hidden = false;
 }
 
-// Smooth scroll enhancement for internal links (respects CSS scroll-behavior)
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', (e) => {
-    const targetId = link.getAttribute('href');
-    const target = document.querySelector(targetId);
-    if (!target) return;
-    // Let browser handle native smooth-scroll; prevent if needed
-  });
-});
+function closeNav(){
+  if (!nav) return;
+  nav.classList.remove('open');
+  navToggle?.setAttribute('aria-expanded','false');
+  body.classList.add('closed');
+  scrim.hidden = true;
+}
 
-// Active nav link based on section in view
-(function activeNav() {
-  const navLinks = Array.from(document.querySelectorAll('.site-nav a[href^="#"]'));
-  if (navLinks.length === 0 || !('IntersectionObserver' in window)) return;
+// ensure closed on load
+closeNav();
 
-  const map = new Map();
-  navLinks.forEach(a => {
-    const id = a.getAttribute('href');
-    const sec = document.querySelector(id);
-    if (sec) map.set(sec, a);
-  });
+navToggle?.addEventListener('click', () => nav.classList.contains('open') ? closeNav() : openNav());
+scrim?.addEventListener('click', closeNav);
+window.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
+window.addEventListener('resize', () => { if (window.innerWidth > NAV_BREAK) closeNav(); });
 
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const link = map.get(entry.target);
-      if (!link) return;
-      if (entry.isIntersecting) {
-        navLinks.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-      }
-    });
-  }, { threshold: 0.5 });
-
-  map.forEach((_, section) => io.observe(section));
-})();
-
+// also close after clicking a nav link
+nav?.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', closeNav));
