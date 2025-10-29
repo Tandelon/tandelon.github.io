@@ -17,7 +17,7 @@ function closeNav(){
   if (!nav) return;
   nav.classList.remove('open');
   navToggle?.setAttribute('aria-expanded','false');
-  body.classList.add('closed');
+  nav.classList.add('closed');
   scrim.hidden = true;
 }
 
