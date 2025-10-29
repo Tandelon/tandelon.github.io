@@ -137,8 +137,9 @@ body.nav-open{overflow:hidden}
   background: radial-gradient(1000px 500px at 10% -10%, rgba(126,231,255,.12), transparent),
               radial-gradient(900px 450px at 95% 10%, rgba(192,132,252,.12), transparent),
               linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,0) 55%);
-  overflow: clip;
-  min-height: 64vh;
+  overflow-x: hidden; 
+  overflow-y: visible;
+  min-height: 64dvh;
 }
 .hero-inner {
   display: grid;
